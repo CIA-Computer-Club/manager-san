@@ -50,7 +50,7 @@ export class Bot {
     this.client.on("guildMemberAdd", member => {
       const channelID = channelIDs.welcome;
       console.log(member);
-      const message = `**Welcome to the puter club discord server, <@${member.id}**`;
+      const message = `**Welcome to the puter club discord server, <@${member.id}>**`;
       const channel = member.guild.channels.cache.get(channelID) !!;
       ( channel as TextBasedChannel).send(message)
       member.roles.add(roles.members);
