@@ -6,7 +6,8 @@ export const bot = new Bot(
     intents: [
       IntentsBitField.Flags.Guilds,
       IntentsBitField.Flags.GuildMembers,
-      IntentsBitField.Flags.GuildMessages
+      IntentsBitField.Flags.GuildMessages,
+      IntentsBitField.Flags.GuildMessageReactions
     ],
   }),
 );

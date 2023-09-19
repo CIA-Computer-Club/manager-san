@@ -17,7 +17,7 @@ import { Command } from "../types/command";
 import "dotenv/config";
 import { catchHandler, warn, log, error } from "./console";
 import chalk from "chalk";
-import { roles, channelIDs } from "../types/misc"
+import { roles, hardIDs } from "../types/misc"
 
 export class Bot {
   public commands = new Collection<string, Command>();
@@ -48,9 +48,9 @@ export class Bot {
     });
 
     this.client.on("guildMemberAdd", member => {
-      const channelID = channelIDs.welcome;
+      const channelID = hardIDs.channel.welcome;
       console.log(member);
-      const message = `**Welcome to the puter club discord server, <@${member.id}>**`;
+      const message = `**Welcome to the computer club discord server, <@${member.id}>** Introduce yourself #introduction !`;
       const channel = member.guild.channels.cache.get(channelID) !!;
       ( channel as TextBasedChannel).send(message)
       member.roles.add(roles.members);
