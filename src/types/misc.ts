@@ -1,6 +1,7 @@
 const roles =  {
-    "members": "1148980460358217798"
-}
+    "members": "1148980460358217798",
+};
+const adminIDs = ["915989266943860746"];
 const hardIDs =  {
     "channel": {
         "welcome": "1150788419606282320",
@@ -10,6 +11,8 @@ const hardIDs =  {
     "messages": {
         "roleReact": "1151038937918361650"
     }
-}
+};
 
-export { roles, hardIDs }
+
+
+export { roles, hardIDs, adminIDs}
