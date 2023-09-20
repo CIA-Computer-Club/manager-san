@@ -49,7 +49,7 @@ export class Bot {
 
     this.client.on("guildMemberAdd", member => {
       const channelID = hardIDs.channel.welcome;
-      const message = `**Welcome to the computer club discord server, <@${member.id}>** Introduce yourself #introduction !`;
+      const message = `**Welcome to the computer club discord server, <@${member.id}> Make sure to check the rules at <#${hardIDs.channel.rules}> and introduce yourself <#${hardIDs.channel.introduction}> !**`;
       const channel = member.guild.channels.cache.get(channelID) !!;
       ( channel as TextBasedChannel).send(message)
       member.roles.add(roles.members);
